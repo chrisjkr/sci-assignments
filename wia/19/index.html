@@ -5,21 +5,44 @@
 	<title>WIA 19</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="form.js"></script>
+	<link rel='stylesheet' type='text/css' href='index.css'>
 </head>
 <body>
 	<form>
+		<span>Imię</span>
 		<input type='text' id='n'>
+		<br>
+		<span>Naziwsko</span>
 		<input type='text' id='sn'>
+		<br>
+		<span>Adres</span>
 		<input type='text' id='a'>
+		<br>
+		<span>Telefon kontaktowy</span>
 		<input type='text' id='t'>
+		<br>
 		<input type='checkbox' id='ec'> Wysłać potwierdzenie?
-		<input type='email' id='e' style="display: none;">
+		<div id='ef'>
+			<br>
+			<span>Email</span>
+			<input type='email' id='e'>
+		</div>
 		<input type='checkbox' id='ac'> Czy jesteś osobą pełnoletnią?
-		<input type='text' id='an'>
-		<input type='text' id='asn'>
-		<input type='text' id='aa'>
-		<input type='text' id='at'>
-		<input type='checkbox' id='2'>
+		<br>
+		<div id='af'>
+			<span>Imię opiekuna</span>
+			<input type='text' id='an'>
+			<br>
+			<span>Naziwsko opiekuna</span>
+			<input type='text' id='asn'>
+			<br>
+			<span>Adres opiekuna</span>
+			<input type='text' id='aa'>
+			<br>
+			<span>Telefon kontaktowy opiekuna</span>
+			<input type='text' id='at'>
+		</div>
+		<br><input type='checkbox' id='2'> Chcę wziąć udział w konkursie 2
 		<p id='r'>Akceptuję regulamin konkursu 1</p>
 	</form>
 </body>
