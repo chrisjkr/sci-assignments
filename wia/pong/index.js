@@ -35,14 +35,12 @@
       function Paddle(pos) {
         var ref;
         this.pos = pos;
-        ({
-          h: 5,
-          w: 150,
-          x: W / 2 - this.w / 2,
-          y: (ref = pos === 'top') != null ? ref : {
-            0: H - this.h
-          }
-        });
+        this.h = 5;
+        this.w = 150;
+        this.x = W / 2 - this.w / 2;
+        this.y = (ref = pos === 'top') != null ? ref : {
+          0: H - this.h
+        };
       }
 
       return Paddle;

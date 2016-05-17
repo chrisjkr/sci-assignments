@@ -37,10 +37,10 @@ $(document).ready ->
   class Paddle
     constructor: (pos) ->
       @pos = pos
-      h: 5
-      w: 150
-      x: W/2 - this.w/2
-      y: (pos == 'top') ? 0 : H - this.h
+      @h =  5
+      @w = 150
+      @x = W/2 - @w/2
+      @y = (pos == 'top') ? 0 : H - @h
       
   paddles.push new Paddle 'bottom'
   paddles.push new Paddle 'top'
@@ -48,4 +48,3 @@ $(document).ready ->
   paintCanvas = ->
     ctx.fillStyle = 'black'
     ctx.fillRect 0, 0, W, H
-    
