@@ -69,4 +69,21 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="35dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Onet.pl"
+        android:id="@+id/onet"
+        android:layout_below="@+id/input"
+        android:layout_alignLeft="@+id/output"
+        android:layout_alignStart="@+id/output" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefon wsparcia"
+        android:id="@+id/galus"
+        android:layout_below="@+id/onet"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

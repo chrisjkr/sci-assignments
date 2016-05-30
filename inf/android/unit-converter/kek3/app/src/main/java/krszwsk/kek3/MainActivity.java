@@ -1,9 +1,13 @@
 package krszwsk.kek3;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
@@ -19,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         final Switch unit = (Switch) findViewById(R.id.unit);
         final EditText input = (EditText) findViewById(R.id.input);
         final TextView output = (TextView) findViewById(R.id.output);
+        final Button onet = (Button) findViewById(R.id.onet);
+        final Button galus = (Button) findViewById(R.id.galus);
 
         input.addTextChangedListener(new TextWatcher() {
             @Override
@@ -43,6 +49,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        onet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://onet.pl"));
+                if(intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
+            }
+        });
+
+        galus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:506393579"));
+                if(intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     public void convert(Switch unit, TextView output, EditText input) {
