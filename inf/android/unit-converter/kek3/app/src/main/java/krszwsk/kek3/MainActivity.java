@@ -28,18 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(input.getText().length() > 0) {
-                    double inputValue = Float.valueOf(input.getText().toString());
-                    if(unit.isChecked()) {
-                        output.setText(String.valueOf(inputValue * 0.6214));
-                    }
-                    else {
-                        output.setText(String.valueOf(inputValue * 1.6));
-                    }
-                }
-                else {
-                    output.setText(":T");
-                }
+                convert(unit, output, input);
             }
 
             @Override
@@ -50,19 +39,24 @@ public class MainActivity extends AppCompatActivity {
 
         unit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(input.getText().length() > 0) {
-                    double inputValue = Float.valueOf(input.getText().toString());
-                    if(isChecked) {
-                        output.setText(String.valueOf(inputValue * 0.6214));
-                    }
-                    else {
-                        output.setText(String.valueOf(inputValue * 1.6));
-                    }
-                }
-                else {
-                    output.setText(":T");
-                }
+                convert(unit, output, input);
             }
         });
+
+    }
+
+    public void convert(Switch unit, TextView output, EditText input) {
+        if(input.getText().length() > 0) {
+            double inputValue = Float.valueOf(input.getText().toString());
+            if(unit.isChecked()) {
+                output.setText(String.valueOf(inputValue * 0.6214));
+            }
+            else {
+                output.setText(String.valueOf(inputValue * 1.6));
+            }
+        }
+        else {
+            output.setText(":T");
+        }
     }
 }
