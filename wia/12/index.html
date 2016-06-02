@@ -1,20 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>WIA 19</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="form.js"></script>
-	<link rel='stylesheet' type='text/css' href='index.css'>
-</head>
-<body>
-  <form>
-    <input type="text" placeholder="Imię i nazwisko">
-    <input type="text" placeholder="Numer telefonu">
-    <input type="text" placeholder="województwo">
-    <input type="text" placeholder="miejscowość">
-    <input type="text" placeholder="ulica">
-    <input type="text" placeholder="tre">
-  </form>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>WiA 12</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="formularz.js" charset="utf-8" async></script>
+    <style media="screen">
+      .form-box {
+        margin-bottom: 5px;
+      }
+      .required {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post">
+      <div class="form-box">
+        <input type="text" name="name" id="name" placeholder="Imie"> *
+      </div>
+      <div class="form-box">
+        <input type="text" name="last-name" id="lastName" placeholder="Nazwisko"> *
+      </div>
+      <div class="form-box">
+        <input type="text" name="phone" id="phone" placeholder="Numer telefonu"> *
+      </div>
+      <div class="form-box">
+        <input type="text" name="woj" id="woj" placeholder="Wojewodztwo">
+      </div>
+      <div class="form-box">
+        <input type="text" name="street" id="street" placeholder="Adres">
+      </div>
+      <div class="form-box">
+        <textarea name="query" rows="8" cols="40" placeholder="Zapytanie(max 500 znakow)" id="query"></textarea>
+        <div>
+          Pozostała liczba znakow <span id="counter">500</span>
+        </div>
+      </div>
+      <div class="form-box">
+        <div>
+          Typ fundamentu
+        </div>
+       <input name="fund" type="radio"> Regularny
+       <input name="fund" type="radio"> Złozony
+      </div>
+      <div class="form-box">
+        <div>
+          Wymiary (metry kwadratowe)
+        </div>
+        <input type="number" name="width" min="1" id="width">
+        <input type="number" name="height" min="1" id="height">
+      </div>
+      <div class="form-box">
+        <input type="text" name="wymiary" id="wymiary" placeholder="Wymiary działki" disabled>
+      </div>
+      <div class="form-box">
+        <input type="number" name="kat" id="kat" placeholder="Kąt nachylenia działki" hidden>
+      </div>
+      <div class="form-box">
+        <input type="number" name="odw" id="odw" min="3" max="10" placeholder="Odwierty" hidden>
+      </div>
+      <div class="form-box">
+        <input type="checkbox" name="dzialka" id="dzialka"> Działka pochylona <br>
+        <input type="checkbox" name="szkody"> Szkody gornicze<br>
+        <input type="checkbox" name="projekt"> Projekt zastępczy<br>
+        <input type="checkbox" name="odwodnienie"> Dodatkowe odwodnienie<br>
+        <input type="checkbox" name="ocieplenie"> Dodatkowe ocieplenie<br>
+        <input type="checkbox" name="odwierty" id="odwierty"> Odwierty geologiczne
+      </div>
+      <button type="submit" name="button" id="send">Wyślij</button>
+    </form>
+    <span class="required">* - wymagane</span>
+  </body>
 </html>
