@@ -1,0 +1,36 @@
+<books>
+  <book>
+    <title>Book no. 1</title>
+    <author>Cool Author One</author>
+    <pages>1337</pages>
+    <description>Cool book high recomendz all persons in all wordl.</description>
+  </book>
+
+  <book>
+    <title>Book no. 2</title>
+    <author>Author Two</author>
+    <pages>7331</pages>
+    <description>much pagez mor pics than text no worry.</description>
+  </book>
+
+  <book>
+    <title>Book no. 3</title>
+    <author>Author Three</author>
+    <pages>1</pages>
+    <description>not even a book</description>
+  </book>
+
+  <book>
+    <title>Book no. 4</title>
+    <author>Author Four</author>
+    <pages>96</pages>
+    <description>barely a book.</description>
+  </book>
+
+    <book>
+    <title>Book no. 5</title>
+    <author>Final Author</author>
+    <pages>much</pages>
+    <description>wow.</description>
+  </book>
+</books>
