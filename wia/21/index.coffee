@@ -35,3 +35,9 @@ $(document).ready ->
               <p>Description: #{$(this).find('description').text()}
             """
   }
+
+  $('#send').click ->
+    if $('#number').val().length
+      $.get('number.php', {number: $('#number').val()})
+      .done (data) ->
+        alert data

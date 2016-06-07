@@ -20,7 +20,7 @@
         }
       });
     });
-    return $.ajax({
+    $.ajax({
       type: 'GET',
       dataType: 'xml',
       url: 'books.xml',
@@ -36,6 +36,15 @@
               return $('#book').html("<p>Title: " + ($(this).find('title').text()) + "\n<p>Author: " + ($(this).find('author').text()) + "\n<p>Pages: " + ($(this).find('pages').text()) + "\n<p>Description: " + ($(this).find('description').text()));
             }
           });
+        });
+      }
+    });
+    return $('#send').click(function() {
+      if ($('#number').val().length) {
+        return $.get('number.php', {
+          number: $('#number').val()
+        }).done(function(data) {
+          return alert(data);
         });
       }
     });

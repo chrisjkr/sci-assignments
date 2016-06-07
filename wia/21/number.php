@@ -1,0 +1,1 @@
+<?php echo "Number ".$_GET['number']." has been recieved."; ?>
