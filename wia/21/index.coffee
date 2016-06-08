@@ -41,3 +41,11 @@ $(document).ready ->
       $.get('number.php', {number: $('#number').val()})
       .done (data) ->
         alert data
+  $('.cat').click ->
+    $.get('news.php', {id: Number($(this).attr('id').slice(3))})
+    .done (data) ->
+      $('#news').empty()
+      $xml = $($.parseXML(data))
+      $xml.find('news article').each (i) ->
+        img = $(this).find('img').text()
+        $('#news').append '<a href="' + img + '"><img height="100" src="' + img + '">'

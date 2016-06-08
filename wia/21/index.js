@@ -39,7 +39,7 @@
         });
       }
     });
-    return $('#send').click(function() {
+    $('#send').click(function() {
       if ($('#number').val().length) {
         return $.get('number.php', {
           number: $('#number').val()
@@ -47,6 +47,20 @@
           return alert(data);
         });
       }
+    });
+    return $('.cat').click(function() {
+      return $.get('news.php', {
+        id: Number($(this).attr('id').slice(3))
+      }).done(function(data) {
+        var $xml;
+        $('#news').empty();
+        $xml = $($.parseXML(data));
+        return $xml.find('news article').each(function(i) {
+          var img;
+          img = $(this).find('img').text();
+          return $('#news').append('<a href="' + img + '"><img height="100" src="' + img + '">');
+        });
+      });
     });
   });
 

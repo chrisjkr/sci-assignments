@@ -1,0 +1,15 @@
+img {
+  margin-right: 10px;
+}
+
+#t5 {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+}
+
+#t6 {
+  position: absolute;
+  top: 200px;
+  right: 100px;
+}
