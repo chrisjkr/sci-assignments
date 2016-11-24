@@ -1,0 +1,115 @@
+2.1
+SELECT employee.FirstName, employee.LastName, department.Name
+FROM employee
+LEFT JOIN department
+ON employee.Id = department.Id;
+
+2.2
+SELECT employee.FirstName, employee.LastName
+FROM employee
+LEFT JOIN department
+ON employee.Id = department.Id
+WHERE department.Name = "IT";
+
+2.3
+SELECT employee.FirstName, employee.LastName, employee.Salary, department.Name
+FROM employee
+LEFT JOIN department
+ON employee.Id = department.Id
+WHERE employee.Salary < 2000
+AND
+department.Name LIKE '__';
+
+2.4
+SELECT employee.FirstName, employee.LastName, employee.Salary, department.Name
+FROM employee
+LEFT JOIN department
+ON employee.Id = department.Id
+ORDER BY employee.Salary DESC
+LIMIT 1;
+
+2.5
+SELECT employee.FirstName, employee.LastName, employee.Salary, department.Name
+FROM employee
+LEFT JOIN department
+ON employee.Id = department.Id
+WHERE employee.Active = 1
+ORDER BY employee.Salary DESC
+LIMIT 1;
+
+2.6
+SELECT department.Name
+FROM department
+JOIN employee
+ON department.Id = employee.Id;
+
+2.7
+SELECT department.Name, employee.FirstName, employee.LastName
+FROM department
+JOIN employee
+ON department.Id = employee.Id
+ORDER BY department.Name ASC;
+
+2.8
+SELECT department.Name, employee.FirstName, employee.LastName
+FROM department
+JOIN employee
+ON department.ManagerId = employee.Id;
+
+2.9
+SELECT department.Name, employee.FirstName, employee.LastName
+FROM department
+LEFT JOIN employee
+ON department.ManagerId = employee.Id;
+
+2.10
+SELECT department.Name
+WHERE department.Name NOT IN
+(SELECT department.Name
+ FROM department
+ JOIN employee
+ ON department.ManagerId = employee.Id);
+
+2.11
+SELECT department.Name, city.Name
+FROM department
+JOIN city
+ON department.CityId = city.Id;
+
+2.12
+SELECT employee.FirstName, employee.LastName, department.Name, city.Name
+FROM employee
+LEFT JOIN department
+ON employee.Id = department.Id
+LEFT JOIN city
+ON department.CityId = city.Id;
+
+2.13
+SELECT employee.FirstName, employee.LastName, department.Name, city.Name
+FROM employee
+LEFT JOIN department
+ON employee.Id = department.Id
+LEFT JOIN city
+ON department.CityId = city.Id
+WHERE employee.FirstName LIKE "J%"
+AND
+city.Name = "Warsaw";
+
+2.14
+SELECT employee.FirstName, employee.LastName, city.Name
+FROM employee
+JOIN department
+ON employee.Id = department.Id
+JOIN city
+ON department.CityId = city.Id
+WHERE LEFT(employee.FirstName, 1) = LEFT(city.Name, 1);
+
+2.15
+SELECT employee.FirstName, employee.LastName
+FROM employee
+WHERE employee.Id NOT IN (
+    SELECT employee.Id
+    FROM employee
+    JOIN department
+    ON employee.Id = department.ManagerId
+    );

@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="pl"><head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous"><meta charset="utf-8"/><title>JavaScript - Cookies</title></head><body><div class="container"><h1>Cookies czyli ciasteczka</h1><p>Cookies są to małe porcje informacji, które mogą być przesyłane między serwerem a przeglądarką. Zwykle odbywa się to w następujący sposób. Przy pierwszym połączeniu z daną stroną serwer wysyła ciasteczko z jakąś informacją do przeglądarki. Ta zapisuje je na dysku. Po ponownym połączeniu z tą stroną przeglądarka odsyła zapamiętaną informację do serwera. Jest to sposób na stwierdzenie, czy użytkownik był już na naszej stronie, bądź też, jakie czynności na niej wykonywał. Cookie przesyłane jest w nagłówku HTTP w postaci pola:</p>
+
+<code>Set-Cookie: nazwa_parametru = wartość; expires = data; path = ścieżka; domain = domena; secure</code>
+
+<p>Interesują nas w tej chwili dwa pola: nazwa_parametru = wartość oraz expires = data. Pierwsze z nich pozwala zapamiętać jakąś informację, np. podane przez użytkownika jego imię w postaci imie = Jarek. Drugie określa ważność ciasteczka, tzn. datę, po której zostanie usunięte z systemu. Data ta musi zostać podana w formacie GMT, np. „Thu, 01 Jul 2015 12:00:00 GMT”. Można do jej ustalenia wykorzystać obiekt Date i udostępniane przez niego konwersje.</p>
+
+<p>Przygotuj formularz, w którym użytkownik będzie mógł podać swoje dane, imię, nazwisko oraz informację o tym, czy posiada
+komputer. Po kliknięciu przycisku Ustaw należy zapisać dane w trzech ciasteczkach. Przy ponownym wczytaniu skryptu formularz powinien się wypełnić uprzednio zapamiętanymi danymi z ciasteczek.</p>
+<p>Przykłady 1 - zapisanie</p>
+<code><br>
+var expirationDate = "Thu, 01 Jul 2015 12	:00:00 GMT";<br>
+var imie = document.form1.imie.value;<br>
+document.cookie = "imie =" + imie + "; expires = " + expirationDate;
+</code>
+
+<h2>Uwaga</h2>
+<p>To zadanie potrzebuje serwera www np XAMPP.</p>
+
+</div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script></body></html>

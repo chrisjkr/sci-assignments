@@ -1,0 +1,66 @@
+2.
+CREATE TABLE promocje(
+    idpromocji INT AUTO_INCREMENT,
+    idksiazki INT,
+    rodzajpromocji TEXT,
+    cenawpromocji FLOAT,
+    PRIMARY KEY (idpromocji)
+);
+
+3.
+INSERT promocje (idksiazki, rodzajpromocji, cenawpromocji)
+VALUES  (1, "okresowa", 29.99),
+		(2, "okresowa", 39.99),
+        (3, "okresowa", 9.99);
+
+4.
+UPDATE promocje
+SET rodzajpromocji = "świąteczna",
+	cenawpromocji = 15.99
+WHERE idpromocji = 3;
+
+5.
+ALTER TABLE promocje 
+CHANGE rodzajpromocji rodzaj VARCHAR(20);
+
+6.
+ALTER TABLE promocje
+ALTER COLUMN rodzaj LONGTEXT NOT NULL;
+
+7.
+ALTER TABLE ksiazki
+ADD COLUMN wydawnictwo VARCHAR(50);
+
+8.
+ALTER TABLE ksiazki
+ALTER COLUMN wydawnictwo VARCHAR(150);
+
+9.
+undefined
+
+10.
+ALTER TABLE promocje
+DROP COLUMN rodzaj;
+
+11.
+ALTER TABLE promocje
+DROP PRIMARY KEY;
+
+12.
+ALTER TABLE promocje
+ADD PRIMARY KEY (idpromocji);
+
+13.
+ALTER TABLE promocje
+ADD COLUMN aktualna BOOLEAN;
+
+14.
+UPDATE promocje
+SET aktualna = true;
+
+15.
+DROP TABLE promocje;
+
+16.
+DELETE FROM zamowienia
+WHERE idzamowienia = 1;

@@ -1,0 +1,81 @@
+INSERT INTO pracownik_oddzialu 
+VALUES ("A1", "Alfaton", "Kraków", "Słoneczna 2/5", "21108106713", "Jan", "Głuchomolski", "Sprzedawca", 2700),
+("A1", "Alfaton", "Kraków", "Słoneczna 2/5", "15057698456", "Wiktor", "Sakowski", "Kierowca", 1800),
+("A2", "Alfabras", "Kraków", "Fabryczna 13/7", "13015778123", "Magdalena", "Waligórska", "Sprzedawca", 2700),
+("B1", "Belatryx", "Hel", "Leśna 10", "30127623435", "Ignacy", "Kuchta", "Kierownik sekcji", 3500),
+("B1", "Belatryx", "Hel", "Leśna 10", "29035934567", "Marzena", "Sępieł", "Kierowca", 1800),
+("B1", "Belatryx", "Hel", "Leśna 10", "25675765623", "Jadwiga", "Makusz", "Sprzedawca", 2700),
+("B2", "Betanor", "Gdynia", "Widokowa 12/26", "46748962378", "Stanisław", "Marelkowski", "Kierowca", 1800),
+("B3", "Betarex", "Gdynia", "Portowa 23", "37485926713", "Zuzanna", "Wał", "Sprzedawca", 2700);
+
+1.  SELECT * FROM pracownik_oddzialu;
+
+2.  SELECT DISTINCT adres_oddzialu 
+    FROM pracownik_oddzialu;
+
+3.  SELECT * 
+    FROM pracownik_oddzialu
+    WHERE wynagrodzenie > 2000;
+
+4.  SELECT pesel, imie, nazwisko
+    FROM pracownik_oddzialu
+    WHERE stanowisko = "Sprzedawca" AND numer_oddzialu = "A1";
+
+5.  SELECT MAX(wynagrodzenie) 
+    FROM pracownik_oddzialu;
+
+6.  SELECT nazwisko, wynagrodzenie
+    FROM pracownik_oddzialu
+    ORDER BY wynagrodzenie ASC;
+
+7.  SELECT AVG(wynagrodzenie)
+    FROM pracownik_oddzialu;
+
+8.  SELECT *
+    FROM pracownik_oddzialu
+    WHERE (miejscowosc_oddzialu = "Kraków" 
+    OR miejscowosc_oddzialu = "Gdynia")
+    AND (wynagrodzenie > 2500
+    OR wynagrodzenie < 2000);
+
+9.  SELECT nazwa_oddzialu, AVG(wynagrodzenie)
+    FROM pracownik_oddzialu
+    GROUP BY nazwa_oddzialu;
+
+10. SELECT UCASE(nazwisko) AS "Nazwiska"
+    FROM pracownik_oddzialu
+    ORDER BY nazwisko DESC;
+
+11. SELECT nazwisko 
+    FROM pracownik_oddzialu
+    ORDER BY wynagrodzenie DESC
+    LIMIT 3;
+
+12. SELECT wynagrodzenie AS "płaca"
+    FROM pracownik_oddzialu;
+
+13. SELECT *
+    FROM pracownik_oddzialu
+    WHERE imie LIKE "%a";
+
+14. UPDATE pracownik_oddzialu
+    SET numer_oddzialu = "A1", miejscowosc_oddzialu = "Szczecin"
+    WHERE numer_oddzialu = "A1" OR numer_oddzialu = "A2";
+
+15. SELECT wynagrodzenie
+    FROM pracownik_oddzialu
+    WHERE stanowisko != "Sprzedawca";
+
+16. SELECT *
+    FROM pracownik_oddzialu
+    WHERE nazwisko LIKE "%ski";
+
+17. SELECT *
+    FROM pracownik_oddzialu
+    ORDER BY wynagrodzenie, nazwisko;
+
+18. UPDATE pracownik_oddzialu
+    SET wynagrodzenie = wynagrodzenie + 200;
+
+19. UPDATE pracownik_oddzialu
+    SET adres_oddzialu = REPLACE(adres_oddzialu, "Portowa", "Wojska Polskiego");

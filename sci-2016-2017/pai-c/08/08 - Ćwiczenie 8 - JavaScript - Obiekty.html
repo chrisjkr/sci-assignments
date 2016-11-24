@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="pl"><head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous"><meta charset="utf-8"/><title>JavaScript - Obiekty</title></head><body><div class="container"><h1>Obiekty</h1>
+<p>Obiekty są to konstrukcje programistyczne posiadające tzw. właściwości, którymi mogą być zmienne JavaScript'u lub inne obiekty. Z obiektami powiązane są funkcje wykonujące operacje na właściwościach obiektu, które nazywamy metodami.</p>
+
+<p>W JS w przeciwieństwie do innych języków nie mamy mechanizmu konstruktora, ale samą klasę możemy stworzyć za pomocą zwykłej funkcji:</p>
+<code>
+function AaBbCc(_x,_y) {
+    this.x = _x;
+    this.y = _y;
+    this.print = function() {
+        console.log(this.x + this.y)
+    }
+}
+</code>
+
+<p>Do właściwości danego obiektu możemy się "dostać", używając następującej notacji:</p>
+<code>nazwa_obiektu.nazwa_właściwości</code>
+<p>Np. jeśli mamy obiekt "komputer", może on mieć właściwości: procesor, zegar, pamiec, cena. Aby więc "wypełnić" obiekt odpowiednimi wartościami, będziemy musieli wykonać następującą sekwencję instrukcji:</p>
+<code>komputer.procesor = "i7"<br/>
+komputer.zegar = 2766<br/>
+komputer.pamiec = 4096<br/>
+komputer.cena = "2500 zł"<br/>
+</code>
+<p>Identyczny efekt uzyskamy również przy zastosowaniu innej notacji:</p>
+<code>nazwa_obiektu[nazwa_właściwości], np. komputer[procesor]</code>
+
+<p>Pozostaje pytanie, jak taki obiekt stworzyć? Najpierw musimy go zdefiniować, tworząc funkcję zwaną konstruktorem, a następnie utworzyć za pomocą operatora: <code>new</code>
+</p>
+<code>var mojObiekt = new AaBbCc(10, 20);
+
+mojObiekt.drukuj();</code>
+wypisze 1020
+
+
+
+<h2>Zadanie 8A</h2>
+<p>Napisz funkcję konstruktora obiektu o nazwie <b>komputer</b>. Utwórz obiekt za pomocą operatora <em>new</em>, a następnie wyświetl jego właściwości na ekranie.</p>
+<hr />
+
+<p>Częściami składowymi obiektu nie muszą być tylko "zwykłe" zmienne. Mogą nimi również być inne obiekty. Jeśli chcielibyśmy do obiektu komputer dodać informację o jego właścicielu, warto stworzyć nowy obiekt - właściciel - i potraktować go jako właściwość komputera.</p>
+
+<h2>Zadanie 8B</h2>
+<p>Napisz konstruktor i utwórz obiekt osoba. Wykorzystaj go jako właściwość obiektu komputer z ćwiczenia poprzedniego.</p>
+</div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script></body></html>

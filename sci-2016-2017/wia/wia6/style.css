@@ -1,0 +1,84 @@
+img{
+	height: 100px;
+	margin: 20px;
+}
+.m-t-50{
+	margin-top: 50px;
+}
+.m-t-30{
+	margin-top: 30px;
+}
+.img1{
+transition:All 1s ease;
+-webkit-transition:All 1s ease;
+-moz-transition:All 1s ease;
+-o-transition:All 1s ease;
+transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-ms-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+
+}
+.img2{
+	transition:All 1s ease;
+-webkit-transition:All 1s ease;
+-moz-transition:All 1s ease;
+-o-transition:All 1s ease;
+transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-ms-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+}
+.img3{
+	transition:All 1s ease;
+-webkit-transition:All 1s ease;
+-moz-transition:All 1s ease;
+-o-transition:All 1s ease;
+transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+-ms-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+}
+.img4{
+	transition:All 1s ease;
+-webkit-transition:All 1s ease;
+-moz-transition:All 1s ease;
+-o-transition:All 1s ease;
+transform: rotate(68deg) scale(0.822) skew(8deg) translate(0px);
+-webkit-transform: rotate(68deg) scale(0.822) skew(8deg) translate(0px);
+-moz-transform: rotate(68deg) scale(0.822) skew(8deg) translate(0px);
+-o-transform: rotate(68deg) scale(0.822) skew(8deg) translate(0px);
+-ms-transform: rotate(68deg) scale(0.822) skew(8deg) translate(0px);
+}
+.img5{
+	transition:All 1s ease;
+-webkit-transition:All 1s ease;
+-moz-transition:All 1s ease;
+-o-transition:All 1s ease;
+transform: rotate(68deg) scale(0.822) skew(8deg) translate(0px);
+-webkit-transform: rotate(68deg) scale(0.822) skew(8deg) translate(0px);
+-moz-transform: rotate(68deg) scale(0.822) skew(8deg) translate(0px);
+-o-transform: rotate(68deg) scale(0.822) skew(8deg) translate(0px);
+-ms-transform: rotate(68deg) scale(0.822) skew(8deg) translate(0px);
+}
+.img6{
+	transition:All 1s ease;
+-webkit-transition:All 1s ease;
+-moz-transition:All 1s ease;
+-o-transition:All 1s ease;
+transform: rotate(345deg) scale(0.822) skew(8deg) translate(0px);
+-webkit-transform: rotate(345deg) scale(0.822) skew(8deg) translate(0px);
+-moz-transform: rotate(345deg) scale(0.822) skew(8deg) translate(0px);
+-o-transform: rotate(345deg) scale(0.822) skew(8deg) translate(0px);
+-ms-transform: rotate(345deg) scale(0.822) skew(8deg) translate(0px);
+}
+.img1:hover, .img2:hover, .img3:hover, .img4:hover, .img5:hover, .img6:hover{
+transform: rotate(0deg) scale(1.146) skew(0deg) translate(0px);
+-webkit-transform: rotate(0deg) scale(1.146) skew(0deg) translate(0px);
+-moz-transform: rotate(0deg) scale(1.146) skew(0deg) translate(0px);
+-o-transform: rotate(0deg) scale(1.146) skew(0deg) translate(0px);
+-ms-transform: rotate(0deg) scale(1.146) skew(0deg) translate(0px);
+}

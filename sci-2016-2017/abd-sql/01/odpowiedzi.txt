@@ -1,0 +1,35 @@
+2.
+a) 
+SELECT COUNT(*) 
+FROM `autorzy`
+
+b) 
+SELECT COUNT(Tytul) 
+FROM `ksiazki`
+
+c) 
+SELECT COUNT(IDKsiazki), `Tytul` 
+FROM `ksiazki` 
+JOIN egzemplarze ON IDKsiazki=KsiazkaID 
+GROUP BY `IDKsiazki`
+
+d) 
+SELECT COUNT(*)
+FROM (
+	`ksiazki`
+	JOIN egzemplarze ON IDKsiazki=KsiazkaID
+)
+JOIN autorzy ON IDAutor=AutorID
+WHERE Imie="Adam" AND Nazwisko="Mickiewicz"
+
+3.
+INSERT INTO autorzy (IDAutor, Imie, Nazwisko)
+VALUES (4, "Czesław", "Miłosz")
+
+4.
+INSERT INTO ksiazki (AutorID, IDKsiazki, RokWydania, Tytul, Wydawnictwo)
+VALUES (4, 7, 2003, "Tło", "Literka"), (4, 9, 1995, "Na brzegu rzeki", "Ossolineum")
+
+5.
+INSERT INTO egzemplarze (DoWypozyczenia, IDEgzemplarz, KsiazkaID)
+VALUES (1, 13, 7), (0, 14, 7)

@@ -1,0 +1,19 @@
+Jêzyk: HTML5, CSS, JavaScript
+Szerokoœæ strony: 
+	- header, footer: 100%
+	- œrodek: 800px
+Szerokoœæ artyku³u: 240px
+Czcionka: Georgia
+Kolor czcionki:
+	- pole daty: #464646;
+	- w headerze: #868686;
+	- pomarañczowy linków: C37911
+	- tekstu w artykuach: #979797
+	- w stopce: #FFFFFF
+Kolor t³a:
+	- pole daty: #191919
+	- pole nag³ówka strony: #33333
+	- œrodka: #FFFFFF
+	- stopki: #1E1E1E
+	
+	

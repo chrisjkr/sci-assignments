@@ -1,0 +1,25 @@
+.form {
+    margin-bottom: 20px;
+}
+
+input {
+    background: #00ccff;
+    width: 50px;
+}
+
+.submit {
+    width: 100px;
+}
+
+label {
+    display: inline-block;
+    text-align: center;
+}
+
+.label {
+    margin-left: 36px;
+}
+
+.label2 {
+    margin-left: 28px;
+}

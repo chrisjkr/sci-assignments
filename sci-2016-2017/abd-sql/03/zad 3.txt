@@ -1,0 +1,20 @@
+1.
+SELECT Imie, Nazwisko
+FROM `pracownicy`
+WHERE Stanowisko IN ('informatyk', 'Sta¿ysta');
+
+2.
+SELECT *
+FROM `pracownicy` 
+WHERE ID_pracownik 
+NOT IN (SELECT ID_pracownik FROM `zlecenia` WHERE Kod !='');
+
+3.
+SELECT *
+FROM `pracownicy`
+WHERE ID_pracownik
+IN (SELECT ID_pracownik
+    FROM `zlecenia`
+    WHERE Kod != ''
+    GROUP BY ID_pracownik
+    HAVING COUNT(*) > 2);

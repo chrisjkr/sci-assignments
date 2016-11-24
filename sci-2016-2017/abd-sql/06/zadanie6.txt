@@ -1,0 +1,62 @@
+1.
+CREATE TABLE stanowiska (
+	id_pracownika INT(5) NOT NULL AUTO_INCREMENT,
+	stanowisko CHAR(40) NOT NULL,
+	numer_pokoju INT(5) UNSIGNED NOT NULL,
+	PRIMARY KEY (id_pracownika)
+);
+
+CREATE TABLE dane (
+	id_pracownika INT(5) NOT NULL,
+	dodane DATETIME,
+	modyfikowane DATETIME,
+	usuniete DATETIME
+);
+
+3.
+CREATE TRIGGER dodane
+BEFORE INSERT ON stanowiska
+FOR EACH ROW
+BEGIN
+	IF EXISTS (	SELECT * 
+				FROM stanowiska 
+				WHERE id_pracownika = NEW.id_pracownika)
+		UPDATE dane
+		SET dodane = now()
+		WHERE id_pracownika = NEW.id_pracownika
+	ELSE
+		INSERT INTO dane (id_pracownika, dodane)
+		VALUES (NEW.id_pracownika, now())
+END;
+
+4.
+CREATE TRIGGER modyfikowane
+BEFORE UPDATE ON stanowiska
+FOR EACH ROW
+BEGIN
+	IF EXISTS ( SELECT *
+				FROM stanowiska
+				WHERE id_pracownika = NEW.id_pracownika)
+		UPDATE dane
+		SET modyfikowane = now()
+		WHERE id_pracownika = NEW.id_pracownika
+	ELSE
+		INSERT INTO dane (id_pracownika, modyfikowane)
+		VALUES (NEW.id_pracownika, now())
+END;
+
+5.
+CREATE TRIGGER usuniete
+BEFORE DELETE ON stanowiska
+FOR EACH ROW
+BEGIN
+	IF EXISTS ( SELECT *
+				FROM stanowiska
+				WHERE id_pracownika = OLD.id_pracownika)
+		UPDATE dane
+		SET usuniete = now()
+		WHERE id_pracownika = OLD.id_pracownika
+	ELSE
+		INSERT INTO dane (id_pracownika, usuniete)
+		VALUES (OLD.id_pracownika, now())
+END;

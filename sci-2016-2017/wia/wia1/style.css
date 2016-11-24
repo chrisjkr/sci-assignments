@@ -1,0 +1,24 @@
+h3{
+	text-align: center;
+}
+#data{
+	text-align: right;
+}
+#imie{
+	text-align: left;
+}
+#spot{
+	text-align: left;
+}
+#tekst{
+	text-indent: 40px;
+}
+#pieczatka{
+	height: 50px; width: 50px; border: 3px; border-style: dotted; border-radius: 50px;
+}
+#powazanie{
+	text-align: right;
+}
+#podpis{
+	font-family: Comic Sans; font-weight: bold; text-align: right;
+}
