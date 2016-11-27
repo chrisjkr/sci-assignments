@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ćwiczenia - obiekt documents</title>
+</head>
+<body>
+    <div class="container">
+        <h3>2.</h3>
+        <button onclick="pierwszyKlik()">Wywołanie funkcji z dołączonego pliku</button>
+        <br/>
+
+        <h3>3.</h3>
+        <script>
+          document.write('Tekst w JavaScript :^)')
+        </script>
+
+        <h3>4.</h3>
+        <pre>
+            To jest sformatowany tekst.
+            Druge zdanie.
+            Trzecie zdanie.
+                Czwarte zdanie.
+        </pre>
+
+        <h3>5.</h3>
+        <pre>
+<script>
+    document.writeln('Tytuł: ' + document.title)
+    document.writeln('Adres: ' + document.URL)
+    document.writeln('Ostatnia modyfikacja: ' + document.lastModified)
+</script>
+        </pre>
+
+        <h3>6.</h3>
+        <button onclick="alert('BARDZO WAŻNA INFORMACJA - lubię się uczyć! :T')">ALERT!</button>
+
+        <h3>7.</h3>
+        <script>
+            var imie = 'Krzysztof'
+            var nazwisko = 'Kraszewski'
+            var wiek = 19
+            var napis = 'Nazywasz się ' + imie + ' ' + nazwisko + ' i masz ' + wiek + ' lat.'
+            document.write(napis)
+        </script>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
