@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Ćwiczenia - obiekt documents</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/krszwsk/hyp/master/dist/hyp.min.css">
+
+    <style>
+        body {
+            transition: 0.5s;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -43,6 +50,12 @@
             var napis = 'Nazywasz się ' + imie + ' ' + nazwisko + ' i masz ' + wiek + ' lat.'
             document.write(napis)
         </script>
+
+        <h3>8.</h3>
+        <button onclick="przeladowanie()">Przeładowanie strony</button>
+
+        <h3>9.</h3>
+        <button onclick="kolorowanie()">Kolorowanie strony</button>
     </div>
 
     <script src="js/main.js"></script>
