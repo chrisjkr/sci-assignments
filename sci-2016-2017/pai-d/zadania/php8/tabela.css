@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 25px;
+}
+
+td, th {
+    height: 100px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, .yellow {
+    background-color: yellow;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.green {
+    background-color: green;
+}
