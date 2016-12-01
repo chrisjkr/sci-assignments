@@ -21,9 +21,22 @@
             </ul>
         </div>
 
-        <div class="footer">
-
+        <div class="footer" id="footer">
         </div>
     </div>
+
+    <script>
+        var r = new XMLHttpRequest()
+        r.onreadystatechange = displayCounter
+        r.open('GET', 'counter.php')
+        r.send()
+
+        function displayCounter () {
+            if (r.readyState === XMLHttpRequest.DONE) {
+                var res = r.responseText
+                document.getElementById('footer').innerHTML = res
+            }
+        }
+    </script>
 </body>
 </html>
