@@ -1,0 +1,4 @@
+pesel;imie;nazwisko
+89030312345;Andrzej;Bia³y
+72102176543;Ma³gorzata;Wiœniewska
+02321204567;B³a¿ej;100;Pr¹¿kowski

@@ -1,0 +1,4 @@
+pesel;wzrost;waga;kolor_oczu
+89030312345;181;69;zielone
+72102176543;168;68;br¹zowe
+02321204567;191;100;zielone
