@@ -8,6 +8,7 @@
     <style>
         body {
             transition: 0.5s;
+            padding-bottom: 50px;
         }
     </style>
 </head>
@@ -56,6 +57,23 @@
 
         <h3>9.</h3>
         <button onclick="kolorowanie()">Kolorowanie strony</button>
+
+        <h3>10.</h3>
+        <button onclick="window.close()">Zamknięcie strony</button>
+
+        <h3>11.</h3>
+        <h4>Sprawdzanie podzielności</h4>
+        <p>Liczba do sprawdzenia: <input id="pa" type="number"></p>
+        <p>Dzielnik: <input id="pb" type="number"></p>
+        <button onclick="divisibleHandler()">Sprawdź</button>
+        <div id="poutput"></div>
+
+        <h4>Funkcja kwadratowa</h4>
+        <p>a: <input id="qa" type="number"></p>
+        <p>b: <input id="qb" type="number"></p>
+        <p>c: <input id="qc" type="number"></p>
+        <button onclick="quadraticHandler()">Oblicz</button>
+        <div id="qoutput"></div>
     </div>
 
     <script src="js/main.js"></script>
