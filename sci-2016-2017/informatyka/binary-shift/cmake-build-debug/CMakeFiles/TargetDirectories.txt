@@ -1,0 +1,3 @@
+/home/krszwsk/Documents/projects/scool/sci-2016-2017/informatyka/binary-shift/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/krszwsk/Documents/projects/scool/sci-2016-2017/informatyka/binary-shift/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/krszwsk/Documents/projects/scool/sci-2016-2017/informatyka/binary-shift/cmake-build-debug/CMakeFiles/binary_shift.dir
