@@ -1,13 +1,10 @@
 #include <iostream>
 
 std::string xorString(std::string payload, char secret) {
-    std::string shifted = "";
     for (int i = 0; i < payload.length(); i++) {
-        int c;
-        c = (int)payload[i] ^ (int)secret;
-        shifted[i] = static_cast<char>(c);
+        payload[i] ^= secret;
     }
-    return shifted;
+    return payload;
 }
 
 int main() {
