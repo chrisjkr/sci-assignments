@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  background: #875080;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  height: 300px;
+}
+
+.baner {
+  text-align: center;
+}
+
+.left {
+  background: #C2A6BF;
+  width: 75%;
+}
+
+.right {
+  background: #A1759C;
+  width: 25%;
+}
+
+.footer {
+  text-align: right;
+}
