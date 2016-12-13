@@ -55,8 +55,8 @@ function quadraticHandler () {
 
 // 12. komentarz w jednej linii
 /*
-komentarz
-w
-wielu
-liniach
+ komentarz
+ w
+ wielu
+ liniach
  */
