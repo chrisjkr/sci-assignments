@@ -1,4 +1,4 @@
--- 1
+1.
 SELECT *
 FROM employee
 WHERE employee.Salary 
@@ -10,7 +10,7 @@ IN
 	 employee
 );
 
--- 2
+2.
 SELECT *
 FROM employee
 WHERE employee.Salary >
@@ -19,7 +19,7 @@ WHERE employee.Salary >
 		FROM employee
 	);
 
--- 3
+3.
 SELECT *
 FROM employee
 WHERE employee.BirthDate =
@@ -29,7 +29,7 @@ WHERE employee.BirthDate =
 	ORDER BY employee.BirthDate ASC LIMIT 1
 );
 
--- 4
+4.
 SELECT *
 FROM employee
 WHERE employee.Salary + 200 =
@@ -39,7 +39,7 @@ WHERE employee.Salary + 200 =
 	WHERE department.Name LIKE "IT"
 );
 
--- 5
+5.
 SELECT employee.FirstName, employee.LastName, employee.Salary,
 (
 	SELECT
@@ -58,7 +58,7 @@ WHERE
 			employee
 	);
 
--- 6
+6.
 SELECT
 	q1.nieaktywni,
 	q2.aktywni
@@ -80,7 +80,7 @@ FROM
 			employee.Active = 1
 	) AS q2;
 
--- 7
+7.
 SELECT
 	*
 FROM
@@ -94,7 +94,7 @@ WHERE
 			employee
 	);
 
--- 8
+8.
 SELECT employee.FirstName, employee.LastName,
 (
 	SELECT
